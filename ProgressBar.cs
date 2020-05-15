@@ -112,12 +112,12 @@ namespace Progress
                     colorBack = Console.BackgroundColor;
                     colorFore = Console.ForegroundColor;
 
-                    Console.BackgroundColor = ConsoleColor.DarkGray;
+                    Console.BackgroundColor = ConsoleColor.Green;
                     Console.SetCursorPosition(this.Left, this.Top);
-                    Console.Write(new string(' ', (int)Math.Round(Value * this.Width / MaxValue)));
+                    Console.Write(new string(' ', (int)(Value * this.Width / MaxValue)));
                     Console.BackgroundColor = colorBack;
 
-                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.SetCursorPosition(this.Left + this.Width + 1, this.Top);
                     if (string.IsNullOrWhiteSpace(msg))
                     {
@@ -132,7 +132,7 @@ namespace Progress
                 else
                 {
                     Console.SetCursorPosition(this.Left + 1, this.Top);
-                    Console.Write(new string(CharType, (int)Math.Round(Value * (this.Width - 2) / MaxValue)));
+                    Console.Write(new string(CharType, (int)(Value * (this.Width - 2) / MaxValue)));
 
                     Console.SetCursorPosition(this.Left + this.Width + 1, this.Top);
                     if (string.IsNullOrWhiteSpace(msg))
